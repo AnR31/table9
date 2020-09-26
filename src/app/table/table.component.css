@@ -1,0 +1,39 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 10px 10px;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+td {
+  text-align: center;
+  vertical-align: bottom;
+}
+
+tr:nth-child(even) {
+  background-color: #edf8f6f8;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+.rounded-input {
+  border-radius:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}

@@ -1,0 +1,23 @@
+<div class="table-container">
+  <div style="margin: 1% 0% 3% 0%;">
+    <table border="1">
+      <caption><h3 class="header">Users</h3></caption>
+      <tr>
+        <th>User (username)</th>
+        <th>Email</th>
+        <th>Address</th>
+      </tr>
+      <tr>
+        <td><input [(ngModel)]="name_value" #name_input = "ngModel" class="rounded-input"></td>
+        <td><input [(ngModel)]="email_value" #email_input = "ngModel" class="rounded-input"></td>
+        <td><input [(ngModel)]="address_value" #address_input = "ngModel" class="rounded-input"></td>
+      </tr>
+      <tr *ngFor="let user of getFilteredUsers(name_input.value, email_input.value, address_input.value)">
+        <td>{{user['name'] + ' (' + user['username'] + ')'}}</td>
+        <td>{{user['email']}}</td>
+        <td (click)="onClickAddress(user)">{{user['address']['zipcode'] + ' ' + user['address']['city'] + ' ' + user['address']['street'] + ' ' + user['address']['suite']}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
